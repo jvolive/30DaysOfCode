@@ -1,7 +1,7 @@
 import React from "react";
-import Sider from "antd/es/layout/Sider";
-
+import { Layout } from "antd";
 import { MenuList } from "../menuList/MenuList";
+import { NavbarLogo } from "./logo/NavbarLogo";
 
 interface SiderProps {
   collapsed: boolean;
@@ -10,14 +10,14 @@ interface SiderProps {
 
 export const AppNavbar: React.FC<SiderProps> = ({ collapsed, darkTheme }) => {
   return (
-    <Sider
+    <Layout.Sider
       collapsed={collapsed}
       collapsible
       trigger={null}
-      theme={darkTheme ? "dark" : "light"}
-      className="sidebar"
+      className={`navbar ${darkTheme ? "dark-mode" : "light-mode"}`}
     >
+      <NavbarLogo />
       <MenuList darkTheme={darkTheme} />
-    </Sider>
+    </Layout.Sider>
   );
 };

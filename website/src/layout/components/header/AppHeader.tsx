@@ -2,7 +2,6 @@ import React from "react";
 import { Header } from "antd/es/layout/layout";
 import { MenuBtn } from "./buttons/MenuBtn";
 import { ThemeBtn } from "./buttons/ThemeBtn";
-import "./Header.scss";
 
 interface HeaderProps {
   collapsed: boolean;
