@@ -2,6 +2,8 @@ import React from "react";
 import { Header } from "antd/es/layout/layout";
 import { MenuBtn } from "./buttons/MenuBtn";
 import { ThemeBtn } from "./buttons/ThemeBtn";
+import { Menu } from "antd";
+import "./header.scss"; // Certifique-se de que o arquivo SCSS está importado
 
 interface HeaderProps {
   collapsed: boolean;
@@ -19,16 +21,23 @@ export const AppHeader: React.FC<HeaderProps> = ({
   colorBgContainer,
 }) => {
   return (
-    <Header className="toggle-menu" style={{ background: colorBgContainer }}>
-      <div>
-        <MenuBtn
-          collapsed={collapsed}
-          onClick={() => setCollapsed(!collapsed)}
-        />
-      </div>
-      <div className="toggle-theme">
-        <ThemeBtn darkTheme={darkTheme} toggleTheme={toggleTheme} />
-      </div>
+    <Header
+      className={`app-header ${collapsed ? "collapsed" : ""}`}
+      style={{ background: colorBgContainer }}
+    >
+      <Menu
+        mode="horizontal"
+        theme={darkTheme ? "dark" : "light"}
+        className="header-menu"
+      >
+        <Menu.Item key="menu-btn" className="menu-btn">
+          <MenuBtn
+            collapsed={collapsed}
+            onClick={() => setCollapsed(!collapsed)}
+          />
+        </Menu.Item>
+      </Menu>
+      <ThemeBtn darkTheme={darkTheme} toggleTheme={toggleTheme} />
     </Header>
   );
 };

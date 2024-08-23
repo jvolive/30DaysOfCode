@@ -1,0 +1,45 @@
+/* AppHeader.scss */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 64px; /* Altura padrão do Ant Design header */
+
+  &.collapsed {
+    /* Estilo opcional para quando o sidebar estiver colapsado */
+  }
+}
+
+.header-menu {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  .ant-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 15px; /* Ajuste o padding conforme necessário */
+  }
+
+  .menu-btn {
+    margin-right: auto;
+  }
+
+  .theme-btn {
+    margin-left: auto;
+    height: 100%; /* Garante que o botão tenha a mesma altura do header */
+    padding: 0; /* Remove padding interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-btn .anticon {
+    font-size: 24px; /* Ajuste o tamanho do ícone */
+  }
+}

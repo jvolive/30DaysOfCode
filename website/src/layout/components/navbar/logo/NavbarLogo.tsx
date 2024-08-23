@@ -1,5 +1,5 @@
-import "./logo.scss";
 import { GiTurtle } from "react-icons/gi";
+import "./logo.scss";
 
 export const NavbarLogo = () => {
   return (

@@ -11,11 +11,7 @@ interface MenuListProps {
 
 export const MenuList: React.FC<MenuListProps> = ({ darkTheme }) => {
   return (
-    <Menu
-      theme={darkTheme ? "dark" : "light"}
-      mode="inline"
-      className="menu-bar"
-    >
+    <Menu theme={darkTheme ? "dark" : "light"} className="menu-bar">
       <Menu.Item key="home" icon={<HomeOutlined />}>
         <Link to="/homepage">Home</Link>
       </Menu.Item>
