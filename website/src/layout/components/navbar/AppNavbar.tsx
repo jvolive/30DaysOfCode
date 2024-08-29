@@ -3,6 +3,8 @@ import { MenuList } from "../menuList/MenuList";
 import { NavbarLogo } from "./logo/NavbarLogo";
 import Sider from "antd/es/layout/Sider";
 
+import "./navbar.scss";
+
 interface SiderProps {
   collapsed: boolean;
   darkTheme: boolean;
