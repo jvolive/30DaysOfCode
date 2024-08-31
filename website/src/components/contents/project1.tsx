@@ -5,16 +5,10 @@ import "./projects.scss";
 
 const data = [
   {
-    title: "Project Title 1",
-  },
-  {
-    title: "Project Title 2",
-  },
-  {
-    title: "Project Title 3",
+    title: "Projeto 1",
   },
 ];
-//
+
 export const Projects: React.FC = () => (
   <div className="new-list-projects-container">
     <h3>Projects</h3>
@@ -30,7 +24,8 @@ export const Projects: React.FC = () => (
               />
             }
             title={<a href="#">{item.title}</a>}
-            description="Description of projects"
+            description="O primeiro desafio será realizar uma WEB API em C#,
+            é algo que preciso melhorar em alguns pontos"
           />
         </List.Item>
       )}
