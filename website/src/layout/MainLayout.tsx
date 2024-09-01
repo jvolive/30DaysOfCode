@@ -1,11 +1,11 @@
 import { Layout } from "antd";
 import { ReactNode } from "react";
-import { AppNavbar } from "./components/navbar/AppNavbar";
 import { Content } from "antd/es/layout/layout";
 import { AppFooter } from "./components/footer/AppFooter";
 import { useCollapsed } from "../hooks/useCollapsed";
 import { useDarkTheme } from "../hooks/useDarkTheme";
 import { AppHeader } from "./components/header/AppHeader";
+import { AppNav } from "./components/navbar/AppNavbar";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ export function MainLayout({ children }: MainLayoutProps) {
 
   return (
     <Layout>
-      <AppNavbar collapsed={collapsed} darkTheme={darkTheme} />
+      <AppNav collapsed={collapsed} darkTheme={darkTheme} />
       <Layout>
         <AppHeader
           collapsed={collapsed}

@@ -1,7 +1,7 @@
 import { GiTurtle } from "react-icons/gi";
 import "./logo.scss";
 
-export const NavbarLogo = () => {
+export const NavLogo = () => {
   return (
     <div className="logo">
       <div className="logo-icon">
